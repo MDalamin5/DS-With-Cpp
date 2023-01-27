@@ -9,8 +9,8 @@ int main()
     int mini=min(a,b);
     cout<<mini<<endl;
     cout<<max(a,b)<<endl;
-    int maxyy=max({a,b,c});
-    cout<<maxyy;
+    //int maxyy=max({a,b,c});
+    //cout<<maxyy;
     vector<int> v;
     int n;
     for(int i=0;i<5;i++)
@@ -18,7 +18,7 @@ int main()
         cin>>n;
         v.push_back(n);
     }
-    //reverse(v.begin(),v.end());
+   reverse(v.begin(),v.end());
      //sort(v.begin(),v.end());
      //sort(v.begin()+1, v.begin()+3+1);
     for(int i=0;i<v.size();i++)
