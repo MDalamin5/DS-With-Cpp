@@ -20,7 +20,7 @@ int main()
 
             }
         }
-        if(sorted)
+        if(sorted==true)
         break;
     }
     for(int i=0;i<n;i++)
