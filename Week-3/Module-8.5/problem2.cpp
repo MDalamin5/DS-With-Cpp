@@ -28,10 +28,9 @@ vector<int>margSort(vector<int>a)
     {
         c.push_back(a[i]);
     }
-    vector<int>sorted_b;
-    vector<int>sorted_c;
-    sorted_b=margSort(b);
-    sorted_c=margSort(c);
+
+   vector<int> sorted_b=margSort(b);
+   vector<int> sorted_c=margSort(c);
     vector<int>sorted_a;
     int indx1=0,indx2=0;
     for(int i=0;i<a.size();i++)

@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+int inversions(vector<int>a);
 int main()
 {
     int n;
@@ -7,5 +8,9 @@ int main()
     vector<int>a(n);
     for(int i=0;i<n;i++)
     cin>>a[i];
+    cout<<inversions(a);
+}
+int inversions(vector<int>a)
+{
     
 }
