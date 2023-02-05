@@ -12,5 +12,6 @@ int main()
 }
 int inversions(vector<int>a)
 {
-    
+    cout<<"work is cooking";
+    return 0;
 }
