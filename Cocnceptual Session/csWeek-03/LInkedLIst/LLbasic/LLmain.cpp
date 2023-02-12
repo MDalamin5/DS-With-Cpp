@@ -60,6 +60,9 @@ int main()
     inserAtHead(head,10);
    // cout<<head->value<<endl;
     inserAtHead(head,33);
+    inserAtHead(head,43);
+    inserAtHead(head,53);
+    inserAtHead(head,63);
     //cout<<head->value<<endl;
     //cout<<head->next->value<<endl;
     display(head);
