@@ -92,7 +92,16 @@ class LinkedList
     }
     void swapFirst()
     {
-        
+        node *a=head;
+        while(a!=NULL)
+        {
+            node *temp;
+            temp->data=a->data;
+            a->data=a->next->data;
+            a->next->data=temp->data;
+            //a=a->next->next;
+
+        }
     }
 };
 
@@ -112,4 +121,8 @@ int main()
     cout<<l.getValue(6)<<endl;
     l.printReverse();
     l.traverse();
+    //l.swapFirst();
+    cout<<"swap functon is not working\n";
+    l.traverse();
+    l.printReverse();
 }

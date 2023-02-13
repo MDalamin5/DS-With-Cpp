@@ -3,11 +3,9 @@ using namespace std;
 vector<int>even_generator(vector<int>a);
 int main()
 {
-    int n;
-    cin>>n;
-    vector<int>a(n);
-    for(int i=0;i<n;i++)
-    cin>>a[i];
+
+    vector<int>a={1,2,3,4,5};
+   
     vector<int>ans=even_generator(a);
     for(int i=0;i<ans.size();i++)
     cout<<ans[i]<<" ";
