@@ -116,6 +116,29 @@ class LinkList
         head=a->next;
         delete a;
     }
+    void deletAtAnyIndex(int index)
+    {
+        if(index>size-1)
+        {
+            cout<<"You are entering wrong index!!"<<endl;
+            return;
+        }
+        if(index==0)
+        {
+            deletAtHead();
+        }
+        size--;
+        node *a = head;
+        int current_i=0;
+        while(current_i!=index)
+        {
+            a=a->next;
+            current_i++;
+        }
+        node *b=a->next;
+        a->next=b->next;
+        delete b;
+    }
 };
 int main()
 {
@@ -130,6 +153,9 @@ int main()
     l.travers();
     cout<<endl;
     l.deletAtHead();
+    l.travers();
+    cout<<endl;
+    l.deletAtAnyIndex(2);
     l.travers();
     cout<<endl;
     cout<<l.getSize();
