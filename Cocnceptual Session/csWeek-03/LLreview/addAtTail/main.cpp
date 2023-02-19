@@ -56,6 +56,7 @@ int main()
     //display(head);
     insertAtTail(22,head);
     insertAtTail(23,head);
+    insertAtTail(24,head);
     //cout<<head->data;
     //cout<<" "<<head->next->data<<endl;
     display(head);
