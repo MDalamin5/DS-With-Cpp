@@ -130,7 +130,7 @@ class LinkList
         size--;
         node *a = head;
         int current_i=0;
-        while(current_i!=index)
+        while(current_i!=index-1)
         {
             a=a->next;
             current_i++;
