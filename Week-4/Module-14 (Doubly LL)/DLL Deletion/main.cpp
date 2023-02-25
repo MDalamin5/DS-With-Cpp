@@ -88,7 +88,34 @@ class DoublyLinkedList
     }
     void deletion(int indx)
     {
-         
+        if(indx>size)
+        {
+            cout<<"ERROr!!"<<endl;
+            return;
+        }
+         node *a= head;
+         int current_i=0;
+         while(current_i!=indx)
+        {
+            a=a->next;
+            current_i++;
+        }
+        node *b = a->prv;
+        node *c = a->next;
+       if(b!=NULL)
+       {
+         b->next=c;
+       }
+        if(c!=NULL)
+        {
+            c->prv=b;
+        }
+        delete a;
+        if(indx==0)
+        {
+            head=c;
+        }
+        size--;
     }
 };
 int main()
@@ -98,6 +125,8 @@ int main()
     dl.insertAtHead(6);
     dl.insertAtHead(7);
     dl.insertAtAnyPos(33,2);
+    dl.travers();
+    dl.deletion(2);
     dl.travers();
     cout<<dl.getSize()<<endl;
 
