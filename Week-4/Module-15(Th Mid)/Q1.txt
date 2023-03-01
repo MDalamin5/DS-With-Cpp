@@ -1,0 +1,50 @@
+
+Time complexity of Bubble sort:
+
+void bubbleSort(int arr[],int size)
+{
+    for(int i=0;i<size;i++)
+{
+    for(int j=0;j<size-i-1;j++)
+    {
+        if(arr[j+1]<arr[j])
+        {
+            swap(arr[j+1],arr[j])
+        }
+    }
+}
+}
+
+Here first loop time complexity is O(n). and inner loop time complexity worse case also O(n).
+so oberall time complexity will be worse case O(n*n) or, O(n^2).
+
+Time complexity for InsertionSort:
+void InsertionSort(int arr[],int size)
+{
+    for(int i=1;i<size;i++)
+    {
+        int index=i;
+        while(index>=1)
+        {
+            if(arr[index]<arr[index-1])
+            {
+                swap(arr[index],arr[index-1]);
+                index--;
+            }
+        }
+    }
+}
+
+Here first loop time complexity is O(n). and 2nd while loop also works like outer loop and 
+how long swaping value it alse depend on 
+dataset and this loop time complexity worse case alse O(n).
+new time complexity is O(n*n) or, O(n^2).
+
+Time complexity of Merge Sort:
+
+Merge sort working divide and conquer algorithm based on the idea of
+ breaking down a list into several sub-lists until each sublist
+ consists of a single element and merging those sublists in a manner that results into a sorted list.
+
+ so Merge sort time complexity worse case is O(nlogn).
+

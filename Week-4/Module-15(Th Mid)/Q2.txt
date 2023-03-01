@@ -1,0 +1,17 @@
+Arrays:
+1. All index or node are list stored sequentilly.
+2. An array all data are same tipe like if array integer type then all value is integer type.
+
+LinkedList:
+1. All index or node are not list stored sequentilly.
+2. In LinkedList is collection of object known as node where node consists two or three part i.e., previus node address,
+data , next node address.
+
+Why do we need a head/root node in a linked list?
+
+Head node is most importent becouse when we access linked list where node will come first and every node is 
+connected like train so first node is head.
+if we know the head then we can access full node or and node of linked list.
+if we add value or delete value at taill then also need head. we go last node trough head.
+if a link list don't have haed then it look like a human waithout head.
+so head is the most import pointer of the linked list.
