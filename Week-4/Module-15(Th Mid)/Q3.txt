@@ -1,0 +1,11 @@
+The basic ide of binary search is array must be sorted and  we find the mid index value which is equal to target value.
+If this value is less then target value then we ignor this value which is less than and equal mid index value.
+If this value is gatter than target value than we ignor this value which is gatter than and equal mid value.
+after complete the loop we will find the target value and this algorithm time complexity is O(logn).
+
+In linear search is deffer because when find a value using this algorithm. this algorithm check all value is equal to 
+target value or not if this value is last of the index then it will take so much time to get the target value.
+commont different binary swach and binary search is: binary search is check all value to get target value but linear search
+algorithm will check sequentilly to get target value.
+
+The requirement for Array must be sorted otherwise it not working poperly.
