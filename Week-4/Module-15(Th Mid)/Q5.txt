@@ -1,0 +1,11 @@
+single LinkedList one node has two part first one is data and another one is next node address.
+Since there are 5 nodes in the list, this means that we need to store 5 integer values and 5 pointers or 
+references. Assuming that each integer value and pointer takes the same amount of memory 
+(e.g. 4 bytes on a 32-bit system), the total memory required to store the singly linked list would be:
+
+5 integers x 4 bytes/integer + 5 pointers x 4 bytes/pointer = 40 bytes
+
+but the 5 integer of array required memory is 5 integers x 4 bytes = 20 bytes.
+
+Therefore, the singly linked list of 5 integer numbers takes twice as much memory as the array because it
+ requires additional memory to store pointers or references to the next element in the list.

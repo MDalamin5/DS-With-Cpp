@@ -1,0 +1,18 @@
+9. Suppose you are working in a project where you need to do many random
+memory accesses and binary search. Array vs Linked list which is more suitable
+in this case? Why?
+
+If i need to do many random memory accesses and binary search, an array is generally 
+more suitable than a linked list.
+
+because of this is that arrays provide constant-time random access to elements, while linked lists require
+ linear time to access elements at arbitrary positions.
+
+Binary search requires random access to elements, which means that it is much more efficient to perform it on 
+an array than on a linked list. With an array, i can access any element in constant time by using its index.
+ However, with a linked list, i need to traverse the list from the beginning each time i want to 
+ access an element at a specific position, which takes linear time.
+
+Therefore, if i need to perform many random memory accesses and binary search, an array would be a better
+ choice than a linked list. However, if i frequently need to insert or delete elements from the middle of 
+ the list, a linked list may be more appropriate.

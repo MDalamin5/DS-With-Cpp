@@ -1,0 +1,13 @@
+single LinkedList allow to go only one direction and doubly LinkedList allow go forword and previus 
+in doubly LinkedList node has three part first part has previus node address and mid has node data nad last part
+node contain next node address. and the The reason for this is that a doubly linked list allows  to traverse
+ the list in both directions. This means that if i need to undo an operation, i can simply go back one 
+ step by following the previous pointer of the current node. Conversely, if i need to redo an operation,
+  i can go forward one step by following the next pointer of the current node.
+
+  on the othar hand, with a singly linked list, i need to keep track of both the
+   current node and the previous node in order to undo an operation. This is because a singly linked list 
+   only allows you to traverse the list in one direction, so i cannot easily go back one step.
+
+   Therefore, Bob's advice to use a doubly linked list in this scenario is appropriate, as it provides more 
+   efficient and flexible functionality for implementing undo-redo operations in a text editor.

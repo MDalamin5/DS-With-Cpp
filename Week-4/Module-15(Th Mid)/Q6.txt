@@ -1,0 +1,15 @@
+In worst case time complexity:
+
+In the worst scenario, each partition results in only one element being placed in the left or right subarray,
+depending on whether the pivot element is the smallest or biggest in the array. In this scenario,
+the Quick Sort recursion tree is converted into a skewed tree with n levels, where n is the array's length.
+In this situation, Quick Sort's worst-case time complexity is O(n2).
+
+In average case time complexity:
+
+Quick Sort's average case time complexity, which is O(nlog(n)), is substantially better than its worst case.
+ This is due to the fact that, on average, the pivot element will be picked at random and divide the array 
+ into two portions that are about equal. Next, using Quick Sort, each of these components will be sorted 
+ recursively, with a final time complexity of O(nlog(n)).
+
+ 

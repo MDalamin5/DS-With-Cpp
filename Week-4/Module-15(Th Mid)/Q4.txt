@@ -1,0 +1,17 @@
+1. What is the time complexity of inserting an element at the beginning of a singly linked list?
+Answer: The time complexity of inserting an element at the beginning of a singly linked list O(1).
+because we just create new node and connected to the head no need any loop so time complexity is O(1).
+
+2. What is the time complexity of inserting an element at any index of a singly linked list?
+the time complexity of inserting an element at any index of a singly linked list worse case O(n).
+because first we need to go before index node and connected to new node with this node so need a loop 
+to this loop thats-why  the worse case time complexity is O(n).
+
+3. What is the time complexity of deleting an element at the beginning of a singly linked list?
+The time complexity of deleting an element at the beginning of a singly linked list O(1).
+because we just delete head and head connecte to next node so time complexity is O(1).
+
+4. What is the time complexity of deleting an element at any index of a singly linked list?
+the time complexity of deleting an element at any index of a singly linked list worse case O(n).
+because firstly, we need to go before node index and delete next index and connected next node with previus node so need a loop 
+to this loop thats-why  the worse case time complexity is O(n).
