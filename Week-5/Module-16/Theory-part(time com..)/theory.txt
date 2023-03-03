@@ -1,0 +1,9 @@
+A computer can in 1 sec 10^9 opration
+
+Polynomial
+O(1)------------constant opration.
+O(n)------------Liner opration.
+O(n^2)----------squer opration.
+O(sqrt(n))
+
+Most bad time complixity is expotent function O(c^n)
