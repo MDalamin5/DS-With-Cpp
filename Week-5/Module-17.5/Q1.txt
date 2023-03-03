@@ -1,0 +1,13 @@
+a.
+
+The time complexity of the given code segment is O(n log n).
+
+The outer loop iterates log₂ n times (since k is multiplied by 2 at each iteration), and the inner loop iterates n times for each value of k. Therefore, the total number of iterations is n log₂ n.
+
+Inside the loops, there are only constant-time operations (printing k and i), so the overall time complexity of the code segment is O(n log n).
+
+b.
+the time complexity o(n).
+
+c.
+The time complexity O(n^2)
