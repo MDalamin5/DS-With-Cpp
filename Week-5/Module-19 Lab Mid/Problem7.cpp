@@ -173,9 +173,46 @@ public:
        swap(a->data,b->data);
 
     }
+    void eraseAtHead()
+    {
+        node *a = head;
+        node *temp;
+        temp=head;
+        head=temp->nxt;
+        delete temp;
+    }
     void deleteZero()
     {
-       
+      
+       node *b= head;
+      while(b!=NULL)
+      {
+        bool flag = false;
+        if(head->data==0)
+        {
+            eraseAtHead();
+            b=b->nxt;
+            flag=true;
+        }
+        if(b->data==0)
+        {
+            node *temp= b;
+            node *p = temp->prv;
+            node *q= temp->nxt;
+
+            p->nxt=temp->nxt;
+            q->prv=temp->prv;
+            delete temp;
+            flag=true;
+            b=b->nxt;
+        }
+        if(flag==false)
+        {
+           b=b->nxt;
+        }
+
+      }
+
     }
 };
 
@@ -185,14 +222,16 @@ int main()
     DoublyLinkedList dl;
     dl.InsertAtHead(7);
     dl.InsertAtHead(4);
-    dl.InsertAtHead(6);
-    dl.InsertAtHead(2);
-    dl.InsertAtHead(3);
+    dl.InsertAtHead(0);
+    dl.InsertAtHead(1);
+    dl.InsertAtHead(0);
    // dl.Traverse();
     //dl.Insert(1,100);
 
     dl.Traverse();
-    dl.swapAtIndedx(1,4);
+    //dl.swapAtIndedx(1,4);
+    dl.eraseAtHead();
+    dl.deleteZero();
     //dl.Reverse();
     dl.Traverse();
 

@@ -8,6 +8,7 @@ int main() {
     for(int i=0;i<n;i++)
     cin>>a[i];
     vector<int>ans=quickSort(a);
+    reverse(ans.begin(),ans.end());
     for(int i=0;i<ans.size();i++)
     cout<<ans[i]<<" ";
 }
@@ -17,7 +18,8 @@ vector<int>quickSort(vector<int>a)
     return a;
     vector<int>b;
     vector<int>c;
-    int pevote=a.size()-1;
+    //int pevote=a.size()-1;
+    int pevote = rand()%(a.size());
     for(int i=0;i<a.size();i++)
     {
         if(i==pevote)
