@@ -153,27 +153,29 @@ public:
         }
         head = a;
     }
-    void swapp()
+    void swapAtIndedx(int i, int j)
     {
-        node *a = head;
-        node *b = head->nxt;
-        int cur_iint=0;
-        /*
-        while(cur_iint!=sz-1)
-        {
-            b=b->nxt;
-            cur_iint++;
-        }
-        */
-        
-        int cur_int=0;
-        while(b!=NULL)
-        {
-            swap(a->data,b->data);
-            a=a->nxt;
-            b=b->nxt;
-            //cur_int++;
-        }
+       node *a= head;
+       node *b = head;
+       int head_a=0;
+       int head_b=0;
+       while(head_a!=i)
+       {
+          a=a->nxt;
+          head_a++;
+       }
+       while(head_b!=j)
+       {
+          b=b->nxt;
+          head_b++;
+       }
+
+       swap(a->data,b->data);
+
+    }
+    void deleteZero()
+    {
+       
     }
 };
 
@@ -186,9 +188,12 @@ int main()
     dl.InsertAtHead(6);
     dl.InsertAtHead(2);
     dl.InsertAtHead(3);
-    
+   // dl.Traverse();
+    //dl.Insert(1,100);
+
     dl.Traverse();
-    dl.swapp();
+    dl.swapAtIndedx(1,4);
+    //dl.Reverse();
     dl.Traverse();
 
 
