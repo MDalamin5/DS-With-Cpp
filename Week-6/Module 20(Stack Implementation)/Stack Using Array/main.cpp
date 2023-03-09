@@ -10,7 +10,7 @@ class Stack
     {
         stack_size=0;
     }
-    //void add elements in stack
+    //void push add elements in stack
     void push(int data)
     {
         stack_size+= 1;
