@@ -106,38 +106,31 @@ class Stack
         }
         return dl.head->data;
     }
+    T getSize()
+    {
+        return dl.getSize();
+    }
 };
 int main()
 {
+    Stack<int>a;
+    a.push(4);
+    a.push(6);
+    a.push(3);
+    a.push(7);
+
+    Stack<int>tem;
+    while(a.getSize()>0)
+    {
+        tem.push(a.top());
+        a.pop();
+    }
+    swap(a,tem);
+    while(a.getSize()>0)
+    {
+        cout<<a.top()<<endl;
+        a.pop();
+    }
+
     
-    Stack<int> stk;
-  for(int i=0;i<5;i++)
-  {
-    //stk.push(rand()%10);
-    stk.push(i+1);
-  }
-  cout<<stk.top()<<endl;
-   stk.pop();
-   cout<<stk.top()<<endl;
-    stk.pop();
-   cout<<stk.top()<<endl;
-    stk.pop();
-   cout<<stk.top()<<endl;
-    stk.pop();
-   cout<<stk.top()<<endl;
-   stk.pop();
-   cout<<stk.top()<<endl;
-   
-   Stack<char> ch;
-   ch.push('c');
-   ch.push('b');
-   ch.push('a');
-   cout<<ch.top()<<endl;
-   ch.pop();
-   cout<<ch.top()<<endl;
-   ch.pop();
-   cout<<ch.top()<<endl;
-   ch.pop();
-    
-   
 }
