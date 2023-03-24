@@ -1,0 +1,4 @@
+In queue is FIFO method. FIFO means First input First output. In real-life example is think about supershop
+price pay or in a serial line who came first he will get first service and who get last he will get service
+in last. In queue Data structure which data push in first then that data pop first.
+but in stack follow LIFO method means last input but first output.
