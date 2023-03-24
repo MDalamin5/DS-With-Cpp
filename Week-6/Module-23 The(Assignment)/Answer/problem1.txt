@@ -1,0 +1,14 @@
+
+
+
+
+If i want to random access in a stack value then array base stack implementation is batter because
+Think in linked list base stack where one node connect with anoter node or one node carray anoter or
+next or previous node address but that node can not contain after next five node address. Therefore, 
+i want to access indext 4 node value then what have to do. I have to do liner travers it will take time
+if the stack size is so bigger then it will take so much time. Now think array base stack in array every 
+cell are stay sequectially so i know every index arrrss if i know array first cell address so it will take
+less time if the stack size is bigger and it time complixity if constant opration which is O(1) where 
+linked list base stack random access time complixity is O(n).
+So, i can make the decitation if i want to random access  in stack then array base stack implementation
+is so batter.
