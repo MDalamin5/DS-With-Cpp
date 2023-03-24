@@ -1,0 +1,9 @@
+
+If i want to convert infix expressin to postfix expressin than i use stack tehory.
+first i take a string where contain final output resut anothe one is stack where contain oprator 
+
+firstly if i got opraent the its add with resut string. If got oprator first check stack is empty
+than push the oprator if not empty thn check oprator precedence if stack top oprator precedence is 
+high then pop oprator and push resut string until gattin less than or equal oprator in stack.
+after add all data in resut string then chack stack if in stack any oprator stay in stack than add
+with resut until empty stack. after that i got final out-put and all steps semulation below:

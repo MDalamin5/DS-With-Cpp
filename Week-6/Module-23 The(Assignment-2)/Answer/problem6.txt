@@ -1,0 +1,9 @@
+
+Stack sort main idea is first teke a temporary stack and first pop data from main stack and push
+the temporary stack and again pop data from main stack and push temporary stack but have to check 
+if i push the data is its right positon or not. if not the right positon the pop data from temporary
+stack and push it main stack and again try to push data in temporary stack it. if that data now got 
+right positon than again pop data from main stack and push it temporary stack in right positon. after 
+push all data and its right positon the swap the stack like swap(main_stack, temporary_stack).
+
+below the all steps: 

@@ -1,0 +1,9 @@
+
+The theory of Regulaer bracket Sequence Check is: We know bracket is character data. I use to Check
+Stack data structue to input bracket is valid or not.
+
+Example for a valid bracket Sequence:
+if i got a opening bracket then push the stack and i got a closing bracket then check stack top bracket
+if its macth with top bracket then pop from stack and so on. If stack top bracket and closing bracket 
+is not macth then make deceation its not Regulaer bracket Sequence.
+

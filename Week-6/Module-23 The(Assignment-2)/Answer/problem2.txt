@@ -1,0 +1,7 @@
+
+
+In stack push which add a new element in head or first index where a single opration so its time complexity
+is O(1). Time complexity of pop opration also constant so its time complexity O(1) because stack work LIFO
+method.
+Time complexity of top opration also constant we just return or check which value has first index so
+its a single opration and time complexity is O(1).

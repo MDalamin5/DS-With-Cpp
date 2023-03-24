@@ -1,0 +1,7 @@
+
+The postfix expression is fist two is operent and third one is oprator example is: ab+ here 'a' and 'b' is 
+operent and '+' is oprator.
+Computer cna not understand infix expression like a+b*c+d is Computer can not understand what have to do
+in this expression to get answer if can it will take so much time. But this expression convert to postfix
+expression the Computer can easyly solve the expression. And how to solve this the explanation is below:
+
