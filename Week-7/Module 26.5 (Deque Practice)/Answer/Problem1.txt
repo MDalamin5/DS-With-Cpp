@@ -1,0 +1,10 @@
+Compare between Stack, Queue and Deque.
+
+Stack: It is woeking LIFO way which mines Last input first output. in stack we can do
+two opration, first we push data in back and pop from back.
+
+Queue: Its woeking FIFO way which mines in first input first output. which came first in
+queue this data will pop fist and real life examaple is supershop customer service or 
+but ticket with line.
+
+Deque: which contain stack and queue both functionality and boss of satack and queue.

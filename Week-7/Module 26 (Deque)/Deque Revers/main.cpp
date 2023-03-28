@@ -20,13 +20,15 @@ class linkedList
     node *head;
     node *tail;
     int size;
+    int reves;
     linkedList()
     {
         head=NULL;
         tail=NULL;
         size=0;
+        reves=0;
     }
-    void pushBack(int data)
+    void insertAtTail(int data)
     {
         node *newNode = new node(data);
         if(head==NULL)
@@ -41,7 +43,18 @@ class linkedList
         tail=newNode;
         size++;
     }
-    void pushFront(int data)
+    void pushBack(int data)
+    {
+        if(reves==0)
+        {
+            insertAtTail(data);
+        }
+        else
+        {
+            insertAtHead(data);
+        }
+    }
+    void insertAtHead(int data)
     {
         node *newNode = new node(data);
         if(head==NULL)
@@ -57,9 +70,21 @@ class linkedList
         head=newNode;
         size++;
     }
-    void popBack()
+    
+    void pushFront(int data)
     {
-        if(getSize()==0)
+        if(reves==0)
+        {
+            insertAtHead(data);
+        }
+        else
+        {
+            insertAtTail(data);
+        }
+    }
+    void eraseAtTail()
+    {
+         if(getSize()==0)
         {
             cout<<"Deque is Empty"<<endl;
             return;
@@ -77,14 +102,25 @@ class linkedList
         size--;
         delete temp;
     }
-    void popFront()
+    void popBack()
+    {
+       if(reves==0)
+       {
+        eraseAtTail();
+       }
+       else
+       {
+        eraseAtHead();
+       }
+    }
+    void eraseAtHead()
     {
         if(getSize()==0)
         {
             cout<<"Deque is Empty"<<endl;
             return;
         }
-        if(size==1)
+        if(size==0)
         {
             delete tail;
             head=tail=NULL;
@@ -97,6 +133,18 @@ class linkedList
         delete temp;
         size--;
     }
+    void popFront()
+    {
+        if(reves==0)
+        {
+            eraseAtHead();
+        }
+        else
+        {
+            eraseAtTail();
+        }
+    }
+
     int front()
     {
         if(getSize()==0)
@@ -130,6 +178,17 @@ class linkedList
     {
         return size;
     }
+   void reversDeque()
+   {
+    if(reves==0)
+    {
+        reves=1;
+    }
+    else
+    {
+        reves=0;
+    }
+   }
 };
 int main()
 {
@@ -137,10 +196,13 @@ int main()
     dq.pushBack(1);
     dq.pushBack(2);
     dq.pushBack(3);
-    //dq.pushBack(4);
-    //dq.pushBack(5);
-    //dq.pushBack(6);
-    //dq.pushFront(55);
+    dq.reversDeque();
+    dq.pushBack(4);
+    dq.reversDeque();
+    dq.pushBack(5);
+    dq.pushBack(6);
+    dq.pushFront(55);
+    
     dq.travers();
     dq.popBack();
     dq.travers();
