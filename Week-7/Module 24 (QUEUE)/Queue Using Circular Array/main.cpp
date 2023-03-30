@@ -14,7 +14,7 @@ class Queue
     }
     void enQueue(int data)
     {
-        if(r+1==MAX_SIZE)
+        if(size==MAX_SIZE)
         {
             cout<<"Queue is Full sir!"<<endl;
             return;
