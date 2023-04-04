@@ -4,7 +4,7 @@ class node
 {
     public:
     int data;
-    node* next;
+    node* next; 
 };
 
 class LinkList
@@ -25,6 +25,10 @@ class LinkList
         newNode->next=NULL;
         return newNode;
     }
+
+
+
+
     void insertAtHead(int data)
     {
         size++;
