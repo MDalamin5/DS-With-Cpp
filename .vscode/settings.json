@@ -5,6 +5,7 @@
         "iostream": "cpp",
         "new": "cpp",
         "random": "cpp",
-        "list": "cpp"
+        "list": "cpp",
+        "stack": "cpp"
     }
 }
