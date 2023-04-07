@@ -7,6 +7,15 @@ int main()
     {
         numst.push(10*i);
     }
-    cout<<numst.empty();
+    cout<<numst.empty()<<endl;
+    if(numst.empty()==false)
+    {
+        numst.pop();
+    }
+    while(!numst.empty())
+    {
+        cout<<numst.top()<<" ";
+        numst.pop();
+    }
 
 }
