@@ -1,44 +1,55 @@
 #include<bits/stdc++.h>
 using namespace std;
-int prec(char ch)
-{
-    if(ch=='/' || ch == '*')
-    {
-        return 1;
-    }
-    else
-    return 0;
-}
+int prece(char ch);
 int main()
 {
-    string s;
-    cin>>s;
-    string res="";
-    stack<char>st;
-    for(int i=0;i<s.size();i++)
+    string inp;
+    cin>>inp;
+    string ans="";
+    stack<char>stk;
+    for(int i=0;i<inp.size();i++)
     {
-      char now = s[i];
-      if(now>='a'&& now<='z')
-      {
-        res +=now;
-      }
-      else
-      {
-        if(now == '+' || now == '-' || now == '*' || now == '/')
+        char now = inp[i];
+        if(now>='a'&& now<='z')
         {
-            while(st.size() && prec(st.top())>=prec(now))
+            ans+=now;
+        }
+        else if(now =='(')
         {
-            res += st.top();
-            st.pop();
+            stk.push(now);
         }
-        st.push(now);
+        else if(now==')')
+        {
+            while(stk.top()!='(')
+            {
+                ans+=stk.top();
+                stk.pop();
+            }
+            stk.pop();
         }
-      }
+        else
+        {
+            while(stk.size() && prece(stk.top())>=prece(now))
+            {
+                ans +=stk.top();
+                stk.pop();
+            }
+            stk.push(now);
+        }
     }
-    while(st.size())
+    while(stk.size())
     {
-        res += st.top();
-        st.pop();
+         ans+=stk.top();
+        stk.pop();
     }
-    cout<<res<<endl;
+    cout<<ans<<endl;
+}
+int prece(char ch)
+{
+    if(ch=='+' || ch=='-')
+    return 1;
+    else if(ch=='*' || ch=='/')
+    return 2;
+    else 
+    return -1;
 }
