@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #include<bits/stdc++.h>
 
@@ -29,3 +30,11 @@ int main() {
     
     return 0;
 }
+=======
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+cout<<"no 7 is loading";
+}
+>>>>>>> 4255f896da04ecb761913e86d73fd8ab1b3e7447
