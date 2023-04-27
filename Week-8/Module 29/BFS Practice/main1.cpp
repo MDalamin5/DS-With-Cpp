@@ -18,6 +18,6 @@ public:
 };
 int main()
 {
-    
+    cout<<"Hello sir!";
     return 0;
 }
