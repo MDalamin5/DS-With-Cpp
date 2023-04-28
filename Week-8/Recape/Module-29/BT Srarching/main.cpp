@@ -7,13 +7,14 @@ public:
     node *left;
     node *right;
     node *parent;
-    // int data;
-    node(int nodeID)
+    int data;
+    node(int nodeID, int data)
     {
         this->nodeID = nodeID;
         this->left = NULL;
         this->right = NULL;
         this->parent = NULL;
+        this->data = data;
     }
 };
 class BinaryTree
@@ -24,9 +25,9 @@ public:
     {
         root = NULL;
     }
-    void insetNode(int nodeID)
+    void insetNode(int nodeID, int data)
     {
-        node *newNode = new node(nodeID);
+        node *newNode = new node(nodeID, data);
         if (root == NULL)
         {
             root = newNode;
@@ -62,27 +63,39 @@ public:
     }
     void BSFtravers(node *a)
     {
-        if(a==NULL)
+        if (a == NULL)
         {
             return;
         }
-        cout<<a->nodeID<<" ";
+        cout << a->nodeID << " ";
         BSFtravers(a->left);
         BSFtravers(a->right);
+    }
+    void searchingData(node *a, int data)
+    {
+        if(a==NULL)
+        return;
+        if(a->data==data)
+        {
+            cout<<a->nodeID<<" "<<a->data<<endl;
+        }
+        searchingData(a->left,data);
+        searchingData(a->right,data);
     }
 };
 int main()
 {
     BinaryTree bt;
-    bt.insetNode(0);
-    bt.insetNode(1);
-    bt.insetNode(2);
-    bt.insetNode(3);
-    bt.insetNode(4);
-    bt.insetNode(5);
-    bt.insetNode(6);
+    bt.insetNode(0, 5);
+    bt.insetNode(1, 10);
+    bt.insetNode(2, 10);
+    bt.insetNode(3, 9);
+    bt.insetNode(4, 8);
+    bt.insetNode(5, 5);
+    bt.insetNode(6, 7);
     bt.BSFtravers(bt.root);
     cout << endl;
+    bt.searchingData(bt.root, 10);
     cout << "Code is Not working" << endl;
     return 0;
 }
