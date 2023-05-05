@@ -106,18 +106,18 @@ public:
     }
     void DeleteData(int value)
     {
-        node *prv=NULL;
-        node *cur=root;
+        node *prnt=NULL;
+        node *cur = root;
         while(cur!=NULL)
         {
             if(value>cur->value)
             {
-                prv=cur;
+                prnt=cur;
                 cur=cur->right;
             }
             else if(value<cur->value)
             {
-                prv=cur;
+                prnt=cur;
                 cur=cur->left;
             }
             else
@@ -127,21 +127,50 @@ public:
         }
         if(cur==NULL)
         {
-            cout<<"Data not foutd...."<<endl;
+            cout<<"Your Data is not Foutd in the BST"<<endl;
             return;
         }
         if(cur->left==NULL && cur->right==NULL)
         {
-            if(prv->left->value==value)
+            if(value>prnt->value)
             {
-                prv->left=NULL;
+                prnt->right=NULL;
             }
             else
             {
-                prv->right=NULL;
+                prnt->left=NULL;
             }
             delete cur;
         }
+
+        if(cur->left==NULL && cur->right!=NULL)
+        {
+             if(prnt->left!=NULL && prnt->left->value==cur->value)
+             {
+                prnt->left=cur->right;
+             }
+             else
+             {
+                prnt->right=cur->right;
+             }
+             delete cur;
+             return;
+        }
+        if(cur->left!=NULL && cur->right==NULL)
+        {
+            if(prnt->left!=NULL && prnt->left->value==cur->value)
+            {
+                prnt->left=cur->left;
+            }
+            else
+            {
+                prnt->right=cur->left;
+            }
+            delete cur;
+            return;
+        }
+        
+
     }
 };
 int main()
@@ -157,5 +186,8 @@ int main()
     bst.BFStravers();
     cout<<endl;
     cout<<bst.BSTsearch(3)<<endl;
+    //bst.DeleteData(8);
+    bst.DeleteData(5);
+    bst.BFStravers();
     return 0;
 }
