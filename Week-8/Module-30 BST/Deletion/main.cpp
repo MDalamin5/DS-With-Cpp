@@ -132,7 +132,7 @@ public:
         }
         if(cur->left==NULL && cur->right==NULL)
         {
-            if(value>prnt->value)
+            if(prnt->right->value==cur->value)
             {
                 prnt->right=NULL;
             }
@@ -141,6 +141,7 @@ public:
                 prnt->left=NULL;
             }
             delete cur;
+            return;
         }
 
         if(cur->left==NULL && cur->right!=NULL)
