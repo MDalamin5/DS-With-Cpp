@@ -171,7 +171,17 @@ public:
             return;
         }
         
+        //case 3 deletion
+        node *temp = cur->right;
+        while(temp->left!=NULL)
+        {
+            temp=temp->left;
+        }
+        int saved = temp->value;
+        DeleteData(saved);
+        cur->value=saved;
 
+  
     }
 };
 int main()
