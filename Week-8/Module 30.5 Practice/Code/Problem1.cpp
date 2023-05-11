@@ -111,6 +111,10 @@ public:
         }
         return false;
     }
+    void deleteData(int data)
+    {
+        
+    }
 };
 int main()
 {
