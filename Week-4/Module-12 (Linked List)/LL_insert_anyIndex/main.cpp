@@ -117,7 +117,9 @@ int main()
     l.insertAtAnyIndex(3,22);
     l.travers();
     cout<<endl;
-    cout<<l.getSize();
+    cout<<l.searchValue(60);
+    cout<<endl;
+   // cout<<l.getSize();
     //cout<<l.searchValue(10)<<" no index found";
     
 
