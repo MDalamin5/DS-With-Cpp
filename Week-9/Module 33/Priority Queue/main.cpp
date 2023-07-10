@@ -86,21 +86,55 @@ public:
         return ret;
 
     }
+    void build_from_array(vector<int> &a)
+    {
+        nodes =a;
+        int n= nodes.size();
+        int last_non_leaf = n/2 -1;
+        for( int  i = last_non_leaf ;i>=0;i--)
+        {
+            down_heapify(i);
+        }
+    }
+    
+};
+class priorityQueue
+{
+    maxHeap h;
+    public:
+    priorityQueue()
+    {
+
+    }
+    
+     void push(int x)
+     {
+        h.insert(x);
+     }
+     int top()
+     {
+        return h.getMax();
+     }
+     void pop()
+     {
+        h.Delete(0);
+     }
+     int size()
+     {
+        return h.nodes.size();
+     }
 };
 int main()
 {
-    maxHeap h;
-    h.insert(4);
-    h.insert(7);
-    h.insert(9);
-    h.insert(1);
-    h.insert(10);
-    h.insert(20);
-    h.insert(30);
-    cout<<"Max Element: "<<h.getMax()<<endl;
-    cout<<"Max Element: "<<h.ExtractMax()<<endl;
-    cout<<"Max Element: "<<h.ExtractMax()<<endl;
-   // h.pirntHeap();
-    //h.Delete(0);
-    //h.pirntHeap();
+   priorityQueue pq;
+   pq.push(5);
+   pq.push(7);
+   pq.push(10);
+   pq.push(1);
+   pq.push(2);
+   while(pq.size()!=0)
+   {
+        cout<<pq.top()<<" ";
+        pq.pop();
+   }
 }
