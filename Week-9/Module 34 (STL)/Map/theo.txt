@@ -1,0 +1,9 @@
+
+
+Map = {key, value}
+set = {1,3,4,5}
+Map= {{1,10},{3,20},{4,30},{5,40}}
+key value must be Distinct.
+
+need to coresponding value : map [4] = 30
+map<string, int>
