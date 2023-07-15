@@ -5,7 +5,7 @@ README.md
 This repository contains a comprehensive course and practice modules for learning Data Structures using C++. The course material and practice exercises are designed to provide a solid foundation in understanding and implementing various data structures.
 
 ## Table of Contents
-- [Course Outline](#https://github.com/MDalamin5/DS-With-Cpp/blob/main/Course%20Outline/Data%20Structure%20Course%20Outline%20Batch-02.pdf)
+- [Course Outline](#course-outline)
 - [Practice Modules](#practice-modules)
 - [Getting Started](#getting-started)
 - [Contact Information](#contact-information)
