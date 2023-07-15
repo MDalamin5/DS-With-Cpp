@@ -6,6 +6,7 @@
         "new": "cpp",
         "random": "cpp",
         "list": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "set": "cpp"
     }
 }
